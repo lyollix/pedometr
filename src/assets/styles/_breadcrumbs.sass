@@ -1,0 +1,13 @@
+.breadcrumbs
+    list-style-type: none
+    display: flex
+    color: #aaa
+    padding: 1rem 0
+    .breadcrumb-item
+        svg
+            position: relative
+            margin-top: -3px
+        &:not(:first-child)
+            &::before
+                content: '/'
+                padding: 0 .5rem

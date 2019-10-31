@@ -1,0 +1,17 @@
+::-webkit-scrollbar
+    width: 3px
+    height: 3px
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner
+    background-color: $dark-color
+
+::-webkit-scrollbar-thumb
+    background-color: $primary-color
+    &:hover
+        background: lighten($primary-color, 5%)
+
+// firefox
+
+*
+    scrollbar-width: thin

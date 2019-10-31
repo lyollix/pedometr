@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PropTypes from 'prop-types';
+import { Provider } from 'react-redux';
+import { Route, Switch } from 'react-router';
+import { ConnectedRouter } from 'connected-react-router'
+import { MainContainer } from './containers';
 
-function App() {
+function App({ history, store }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Provider store={store}>
+          <ConnectedRouter history={history}>
+              <Switch>
+                  <Route path="/" component={MainContainer} />
+              </Switch>
+          </ConnectedRouter>
+      </Provider>
   );
 }
+
+App.propTypes = {
+    history: PropTypes.shape({
+        location: PropTypes.shape({
+            pathname: PropTypes.string.isRequired
+        }).isRequired
+    }).isRequired,
+    store: PropTypes.shape({
+        dispatch: PropTypes.func.isRequired
+    }).isRequired
+};
 
 export default App;

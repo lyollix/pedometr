@@ -1,0 +1,50 @@
+.form-container
+    display: flex
+    justify-content: space-between
+    .walk-form
+        flex-grow: 1
+        margin: 1rem
+
+.form-group
+    &:not(:last-child)
+        margin-bottom: .75rem
+
+input.form-control,
+textarea.form-control
+    padding: .75rem
+
+.form-control
+    border: 1px solid $light-color
+    outline: none
+    width: 100%
+
+.form-group
+    .react-datetime-picker__wrapper
+        border: 1px solid $light-color
+        padding: .365rem
+        width: 100%
+        .react-datetime-picker__calendar-button
+            svg
+                stroke: $light-color
+
+.form-actions
+    position: absolute
+    bottom: 0
+    a
+        color: inherit
+        text-align: center
+
+.form-control-feedback
+    color: $error-color
+    font-style: italic
+    font-size: .8em
+
+@media screen and (max-width: 1200px)
+    .form-container
+        flex-wrap: wrap
+    .form-actions
+        position: static
+        width: 100%
+        display: flex
+        > .btn
+            flex-basis: 50%

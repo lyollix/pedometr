@@ -1,0 +1,67 @@
+.walks-chart
+    position: relative
+    width: 100%
+    padding: 0 1rem
+    .c3
+        width: 100%
+        svg
+            width: 100%
+
+    .c3-axis-x line,
+    .c3-axis-y line,
+    .c3-axis-y path,
+    .c3-axis-x path
+        stroke: white
+
+    .c3-axis-x g,
+    .c3-axis-y g
+        fill: rgba(0,0,0,.2)
+
+    .c3-line
+        stroke-width: 2px
+
+    .c3-circle
+        fill: $primary-color
+
+    .c3-xgrid, .c3-ygrid
+        stroke-dasharray: none
+        stroke: rgba(0,0,0,.1)
+
+    .c3-text
+       transform: translateY(-8px)
+       font-size: .875rem
+
+    #popup
+        display: none
+        position: absolute
+        background-color: #fff
+        padding: .7rem
+        border-radius: 5px 5px 5px 0
+        transform: translate(0, -100%)
+        filter: drop-shadow(-0px 0 3px rgba(0, 0, 0, 0.35));
+        .walk-date
+            margin-bottom: .2rem
+            color: rgba(28,32, 37, .4)
+        .distance
+            font-family: 'PT Sans Caption', sans-serif
+            font-weight: bold
+            font-size: 1.5rem
+            text-align: center
+            margin-bottom: .5rem
+        .btn
+            cursor: pointer
+            font-size: .625rem
+            padding: .5rem 0
+            width: 8rem
+        &:after
+            position: absolute
+            left: 0
+            margin-top: .6rem
+            content: ''
+            display: block
+            width: 1rem
+            height: 1rem
+            background-color: transparent
+            border: 1rem solid transparent
+            border-left: 1rem solid #fff
+            border-top: 1rem solid #fff

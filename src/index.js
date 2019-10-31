@@ -1,12 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux';
+import { AppContainer } from 'react-hot-loader';
+import { createBrowserHistory } from 'history';
+
+import 'loaders.css/loaders.min.css';
+import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
+import './assets/styles/main.sass';
+
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import configureStore from './store';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const dest = document.getElementById('root');
+
+const history = createBrowserHistory();
+
+const store = configureStore(window.__INITIAL_STATE__, history);
+
+const render = Component => ReactDOM.render(
+    <AppContainer>
+        <Component history={history} store={store} />
+    </AppContainer>,
+    dest
+);
+
+render(App);
+
+if (module.hot) {
+    module.hot.accept('./App', () => render(App));
+}

@@ -1,0 +1,57 @@
+.table
+    width: 100%
+    border-collapse: collapse
+    a
+        text-decoration: none
+        color: inherit
+    .sort-indicator
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 14px
+        height: 14px
+        background-color: $primary-color
+        border-radius: 3px
+        margin-left: .5rem
+        cursor: pointer
+        opacity: .2
+        margin-top: 2px
+        svg
+            margin-top: -1px
+        &.active
+            opacity: 1
+        &.desc
+            transform: rotate(180deg)
+
+    thead, .thead
+        background-color: $dark-color
+
+    th, td, .th, .td
+        height: 40px
+        vertical-align: middle
+        text-align: left
+        padding-left: 1rem
+    th, .th
+        color: #fff
+        font-size: .875rem
+        white-space: nowrap
+    td, .td
+        font-size: .75rem
+    tr:nth-child(2n),  .tr:nth-child(2n)
+        background-color: $light-color
+    tbody, .tbody
+        tr:hover, .tr:hover
+            background-color: rgba(0, 0, 0, .2)
+    .tr
+        display: flex
+        width: 100%
+        .th, .td
+            display: flex
+            align-items: center
+
+    .table-actions
+        max-width: 50px
+        .btn
+            color: #aaa
+            &:hover
+                color: $dark-color
