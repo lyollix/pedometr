@@ -73,12 +73,12 @@ class WalkShowPage extends Component {
 }
 
 export default connect(({
-    walks: {
-        item,
-        itemLoading,
-        itemFetched,
-        itemErrorMessage
-    }
+walks: {
+    item,
+    itemLoading,
+    itemFetched,
+    itemErrorMessage
+}
 }) => ({
     item,
     itemLoading,

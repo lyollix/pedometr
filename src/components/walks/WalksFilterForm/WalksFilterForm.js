@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 
-import { WALKS_FILTER_FORM } from '../../../constants/Form';
+import { WALKS_FILTER_FORM } from '@/constants/Form';
 
-import {Button, renderField} from '../../../helpers';
+import {Button, renderField} from '@/helpers';
 
 function WalksFilterForm({
     walks, isLoading, onReset, onSearch

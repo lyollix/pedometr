@@ -131,7 +131,6 @@ class WalksIndexPage extends Component {
                         </Modal>
                     )
                 }
-
             </div>
         );
     }
