@@ -26,7 +26,7 @@ function WalksTable({ items, onDelete }) {
                     </span>
                     </th>
                 ))}
-                <th />
+                <th className="table-actions"/>
             </tr>
             </thead>
             <tbody>

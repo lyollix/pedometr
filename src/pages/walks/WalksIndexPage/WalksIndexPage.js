@@ -125,6 +125,7 @@ class WalksIndexPage extends Component {
                                     .then(() => toastr.warning('Удаление прогулки', `Прогулка ${this.state.deleteItem.id} успешно удалена`))
                                     .then(() => this.setState({deleteItem:null}))
                                     .then(() => this.fetchData())
+                                    .then(({items})=>{this.setState({items})});
                             }}>Удалить</Button>
                             </div>
                         </Modal>
