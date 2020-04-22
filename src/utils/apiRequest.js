@@ -6,7 +6,7 @@ import isObject from 'lodash/isObject';
 import snakeCase from 'lodash/snakeCase';
 
 // import { API_URI } from '../config';
-const API_URI='http://http://188.120.243.32:3001'
+const API_URI='http://188.120.243.32:3001'
 
 function headers() {
     return {
