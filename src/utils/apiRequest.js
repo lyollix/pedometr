@@ -23,6 +23,7 @@ export default class apiRequest {
             return v ? ([snakeCase(key), encodeURIComponent(isObject(v) ? JSON.stringify(v) : v)]).join('=')
                 : null;
         })).join('&')}`].join('?');
+        console.log(`${API_URI}/${url}`)
         return axios.get(`${API_URI}/${url}`, headers());
     }
 
