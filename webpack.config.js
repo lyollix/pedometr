@@ -65,10 +65,12 @@ module.exports = {
                         {
                             loader: 'sass-loader',
                             options: {
+                                sassOptions: {
                                 sourceMap: true,
                                 includePaths: [
                                     path.resolve(__dirname, './src/assets')
                                 ]
+                                }
                             }
                         }
                     ]
